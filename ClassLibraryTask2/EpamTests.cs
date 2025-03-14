@@ -15,7 +15,8 @@ namespace EpamAutomationTests
     {
         private IWebDriver? driver;
         private WebDriverWait? wait;
-        private string downloadPath = @"C:\Users\alexs\Downloads\";
+        private string downloadPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
+
 
         [TestInitialize]
         public void Setup()
